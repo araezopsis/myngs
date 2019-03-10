@@ -20,6 +20,7 @@ ENV PATH /opt/conda/bin:$PATH
 
 # Overwrite this with 'CMD []' in a dependent Dockerfile
 RUN conda upgrade conda
+RUN conda install make
 RUN conda install fastqc
 RUN conda install fastx_toolkit
 RUN conda install cutadapt
@@ -31,6 +32,7 @@ RUN conda install samtools=1.3.1
 RUN conda install htseq
 RUN conda install subread
 RUN conda install cufflinks
+RUN conda install salmon
 RUN conda install bedtools
 RUN conda install bedops
 RUN conda install sra-tools
